@@ -1,25 +1,42 @@
 import "dart:io";
 
 class Cat {
-  int x = 10;
+  final String _asciiArt = '''
+    /\\_/\\
+( o . o)
+   > ^ <
+  ''';
+  int x = 3;
   int y = 7;
-  String _asciiArt = "";
 
   void display() {
-    List<String> result = this._asciiArt.trim().split("\n");
 
-    for(int i = 0; i <= result.length; i++) {
-      if(i == y) {
-        print("" * x + result[i]);
+    List<String> lines = _asciiArt.trim().split("\n");
+    for(int i = 0; i <= lines.length; i++) {
+      if(i == y ) {
+        print(''*x + lines[i]);
       }
       else {
-        print(result[i]);
+        print(lines[i]);
       }
     }
   }
+
+  void move(int x , int y) {
+    this.x = x;
+    this.y = y;
+    print('$this.x');
+    display();
+  }
+
 }
 
+
+
 void main() {
-  final cat  = Cat();
-  cat.display();
+  final result = Cat();
+  result.display();
+
+
+
 }
