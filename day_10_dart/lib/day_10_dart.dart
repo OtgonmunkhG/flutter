@@ -42,14 +42,6 @@ class Animal {
   }
 }
 
-class Door {
-  int numberOfDoors = 12;
-  Door({required int numberOfDoors}) {
-    this.numberOfDoors = numberOfDoors;
-  }
-}
-
-
 class Pig extends Animal {
   Pig({required  String name, required String type}) : super(name: '', type: '') {
     this.name = name;
@@ -64,6 +56,14 @@ class Pig extends Animal {
   String name = "";
   String type = "";
 }
+
+class Door {
+  int numberOfDoors = 12;
+  Door({required int numberOfDoors}) {
+    this.numberOfDoors = numberOfDoors;
+  }
+}
+
 
 void main() {
   final Drum = Sprite(10, 10); // create sprite object
