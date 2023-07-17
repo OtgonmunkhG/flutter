@@ -40,8 +40,8 @@ class Building {
   }
 
   String name = "";
-  Floor floors = Floor(numberOfFloors: 2);
-  Door doors = Door(numberOfDoors: 3);
+  Floor floors = Floor(numberOfFloors: 0);
+  Door doors = Door(numberOfDoors: 0);
 }
 
 
