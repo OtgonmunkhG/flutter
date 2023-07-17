@@ -49,17 +49,6 @@ class Door {
   }
 }
 
-class Building {
-  Building({required String name, required int floor, required String door}) {
-    this.name = name;
-    this.door = door;
-    this.floor = floor;
-  }
-
-  String name = "";
-  int floor = 9;
-  String door = "";
-}
 
 class Pig extends Animal {
   Pig({required  String name, required String type}) : super(name: '', type: '') {
@@ -84,7 +73,6 @@ void main() {
   final shape = Shape(length: 945, height: 58);
   shape.showPosition();
 
-  final building = Building(name: "Ajnai 101", floor:  3, door: "2 хаалгатай");
   final pig = Pig(name: "pig", type: "pig");
   pig.makeNoise();
 }
