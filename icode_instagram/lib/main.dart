@@ -1,0 +1,28 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:icode_instagram/screen/signup_screen.dart';
+import '';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    const mobileBackgroundColor = Color.fromRGBO(0, 0, 0, 1);
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'iCode - Stagram',
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: mobileBackgroundColor),
+      home:  SignUpScreen(),
+    );
+  }
+}
+
+
