@@ -56,4 +56,6 @@ void main() {
   final building = Building(name: "Ajnai 101", floors: numberOfFloor, doors : numberOfDoor );
 
   print(numberOfFloor.numberOfFloors);
+  print(building.name);
+
 }
