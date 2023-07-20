@@ -12,7 +12,11 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Hello flutter",
+      home: const Scaffold(
+        body: Center(
 
+        ),
+      )
     );
   }
 }
