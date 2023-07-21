@@ -1,6 +1,6 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:wordfind_app/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: Text("Hello world"),
+          child: WelcomePage(),
         ),
         appBar: AppBar(
           title: Text(
