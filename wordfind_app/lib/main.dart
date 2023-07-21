@@ -13,6 +13,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       home: Scaffold(
+        floatingActionButton: Container(
+          width: 310,
+          height: 60,
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              begin:
+            )
+          ),
+        ),
         body: Center(
           child: Text("Hello world"),
         ),

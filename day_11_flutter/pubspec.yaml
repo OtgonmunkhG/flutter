@@ -78,13 +78,12 @@ flutter:
   fonts:
      - family: Ribeye
        fonts:
-         - asset: fonts/Ribeye-Regular.ttf
+         - asset: assets/fonts/Ribeye-Regular.ttf
      - family: Nunito
        fonts:
-         - asset: fonts/NunitoSans.ttf
+         - asset: assets/fonts/NunitoSans.ttf
            weight: 700
-         - asset: fonts/TrajanPro_Bold.ttf
-           weight: 700
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
