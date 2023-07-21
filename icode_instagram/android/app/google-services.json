@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "593297952690",
+    "project_id": "stagram-eeb4d",
+    "storage_bucket": "stagram-eeb4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593297952690:android:748bfcee1426329510deab",
+        "android_client_info": {
+          "package_name": "com.example.icode_instagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593297952690-9ijr3h2onlpnmucfo5o3qm59ickk7092.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ4CCpYFnk3-R_r0Kf-rwJ39Z-GOj1cjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593297952690-9ijr3h2onlpnmucfo5o3qm59ickk7092.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
