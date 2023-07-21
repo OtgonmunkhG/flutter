@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,16 +20,39 @@ class MyApp extends StatelessWidget {
           height: 60,
           decoration: BoxDecoration(
             gradient: const LinearGradient(
-              begin:
-            )
+              begin: Alignment.centerLeft,
+              colors: const [Color(0xFFE86B02), Color(0xFFFA9541)],
+            ),
+            borderRadius: BorderRadius.circular(25),
+          ),
+          child: ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25)),
+            ),
+            child: Text(
+              "PLAY",
+              style: TextStyle(
+                fontFamily: "Nunito",
+                fontSize: 24,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
           ),
         ),
         body: Center(
           child: Text("Hello world"),
         ),
         appBar: AppBar(
-          title: Text("Word Find Game", style: TextStyle(fontFamily: "Ribeye"),),
+          title: Text(
+            "Word Find Game",
+            style: TextStyle(fontFamily: "Ribeye"),
+          ),
         ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }
