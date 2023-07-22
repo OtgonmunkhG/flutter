@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       home: Scaffold(
+
         floatingActionButton: Container(
           width: 310,
           height: 60,
@@ -44,14 +45,15 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Center(
+
           child: WelcomePage(),
         ),
-        appBar: AppBar(
-          title: Text(
-            "Word Find Game",
-            style: TextStyle(fontFamily: "Ribeye"),
-          ),
-        ),
+        // appBar: AppBar(
+        //   title: Text(
+        //     "Word Find Game",
+        //     style: TextStyle(fontFamily: "Ribeye"),
+        //   ),
+        // ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
