@@ -1,10 +1,40 @@
 import 'package:flutter/material.dart';
-import 'package:wordfind_app/Gradient_letter.dart';
+import 'package:wordfind_app/widgets/Gradient_letter.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Container(
+        margin: EdgeInsets.only(bottom: 40.0),
+        width: 310,
+        height: 60,
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            begin: Alignment.centerLeft,
+            colors: [Color(0xFFE86B02), Color(0xFFFA9541)],
+          ),
+          borderRadius: BorderRadius.circular(25),
+        ),
+        child: ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+          ),
+          child: const Text(
+            "PLAY",
+            style: TextStyle(
+              fontFamily: "Nunito",
+              fontSize: 24,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ),
+      ),
+      backgroundColor: Color(0x4cfbb478),
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
@@ -16,16 +46,16 @@ class WelcomePage extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.all(12.0),
-              child: const Row(
+              child:  Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  GradientLetter("W"),
+                  GradientLetter("W", 60, 60, 38, 38, 16),
                   Padding(padding: EdgeInsets.all(10.0)),
-                  GradientLetter("O"),
+                  GradientLetter("O", 60, 60, 38, 38, 16),
                   Padding(padding: EdgeInsets.all(10.0)),
-                  GradientLetter("R"),
+                  GradientLetter("R", 60, 60, 38, 38, 16),
                   Padding(padding: EdgeInsets.all(10.0)),
-                  GradientLetter("D"),
+                  GradientLetter("D", 60, 60, 38, 38, 16),
                 ],
               ),
             ),
@@ -54,6 +84,7 @@ class WelcomePage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

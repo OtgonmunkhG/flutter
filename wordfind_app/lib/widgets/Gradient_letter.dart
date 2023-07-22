@@ -2,15 +2,27 @@ import 'package:flutter/material.dart';
 
 class GradientLetter extends StatelessWidget {
   final String letter;
-  const GradientLetter(this.letter, {super.key});
+  final double sizeOfHeight;
+  final double sizeOfWidth;
+  final double fontSize;
+  final double fontHeight;
+  final double raduisOfBorder;
+  const GradientLetter(
+      this.letter,
+      this.sizeOfHeight,
+      this.sizeOfWidth,
+      this.fontSize,
+      this.fontHeight,
+      this.raduisOfBorder,
+      {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 60,
-      height: 60,
+      width: sizeOfWidth,
+      height: sizeOfHeight,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(raduisOfBorder),
           color: const Color(0xFFFF9002)),
       child: Container(
         child: FractionallySizedBox(
@@ -31,11 +43,10 @@ class GradientLetter extends StatelessWidget {
               child: Text(
                 letter,
                 style: TextStyle(
-                  fontSize: 38,
-                  height: 50 / 38,
-                  color: Colors.white,
-                  fontFamily: "Ribeye"
-                ),
+                    fontSize: fontSize,
+                    height: 50 / fontHeight,
+                    color: Colors.white,
+                    fontFamily: "Ribeye"),
               ),
             ),
           ),
