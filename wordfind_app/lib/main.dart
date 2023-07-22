@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: Scaffold(
 
+
         floatingActionButton: Container(
+          margin: EdgeInsets.only(bottom: 40.0),
           width: 310,
           height: 60,
           decoration: BoxDecoration(
@@ -55,6 +57,7 @@ class MyApp extends StatelessWidget {
         //   ),
         // ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+
       ),
     );
   }

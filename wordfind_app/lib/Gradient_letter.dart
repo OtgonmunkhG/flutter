@@ -31,8 +31,8 @@ class GradientLetter extends StatelessWidget {
               child: Text(
                 letter,
                 style: TextStyle(
-                  fontSize: 32,
-                  height: 52 / 38,
+                  fontSize: 38,
+                  height: 50 / 38,
                   color: Colors.white,
                   fontFamily: "Ribeye"
                 ),

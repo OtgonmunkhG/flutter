@@ -15,7 +15,7 @@ class WelcomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: EdgeInsets.all(20.0),
+              margin: EdgeInsets.all(12.0),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
