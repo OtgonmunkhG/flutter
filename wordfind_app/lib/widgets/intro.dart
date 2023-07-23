@@ -5,8 +5,8 @@ class IntroductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton:  Container(
-        child:  Icon(
+      floatingActionButton: Container(
+        child: Icon(
           Icons.arrow_back_outlined,
           color: Colors.white,
         ),
@@ -24,7 +24,7 @@ class IntroductionPage extends StatelessWidget {
               image: DecorationImage(
             image: AssetImage("assets/back2.png"),
           )),
-          child: const Column(
+          child:  Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
@@ -47,33 +47,40 @@ class IntroductionPage extends StatelessWidget {
                     fontSize: 14.4,
                     color: Color(0xFFE48000)),
               ),
-
-
-             Image(image: AssetImage("assets/head.png")),
-             Padding(padding: EdgeInsets.all(29.0)),
+              Image(image: AssetImage("assets/head.png")),
+              Padding(padding: EdgeInsets.all(29.0)),
               Text(
                 "Player name",
                 style: TextStyle(color: Color(0xFFFA9541), fontSize: 20),
               ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 250,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        labelText: "Type here",
-                        labelStyle: TextStyle(
-                          fontFamily: "Nunito",
-                          color: Color(0xFFFA9541),
-                          fontSize: 18,
+              Padding(padding: EdgeInsets.all(8.0)),
+              ColoredBox(
+                color: Colors.white,
+                child: SizedBox(
+                  width: 250,
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                        borderSide: BorderSide(
+                          style: BorderStyle.none,
                         ),
+                      ),
+                      labelText: "Type here",
+                      labelStyle: TextStyle(
+                        fontFamily: "Nunito",
+                        color: Color(0xFFFA9541),
+                        fontSize: 18,
+                      ),
+                      icon: Icon(
+                        Icons.clear,
+                        color: Color(0xFFFA9541),
+                        size: 24,
                       ),
                     ),
                   ),
-
-                ],
+                ),
               ),
             ],
           ),
