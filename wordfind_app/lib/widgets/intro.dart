@@ -5,8 +5,8 @@ class IntroductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Container(
-        child: const Icon(
+      floatingActionButton:  Container(
+        child:  Icon(
           Icons.arrow_back_outlined,
           color: Colors.white,
         ),
@@ -24,7 +24,7 @@ class IntroductionPage extends StatelessWidget {
               image: DecorationImage(
             image: AssetImage("assets/back2.png"),
           )),
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
@@ -47,23 +47,33 @@ class IntroductionPage extends StatelessWidget {
                     fontSize: 14.4,
                     color: Color(0xFFE48000)),
               ),
-              Image(image: AssetImage("assets/head.png")),
+
+
+             Image(image: AssetImage("assets/head.png")),
+             Padding(padding: EdgeInsets.all(29.0)),
               Text(
                 "Player name",
                 style: TextStyle(color: Color(0xFFFA9541), fontSize: 20),
               ),
-              const SizedBox(
-                width: 250,
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: "Type here",
-                    labelStyle: TextStyle(
-                      fontFamily: "Nunito",
-                      color: Color(0xFFFA9541),
-                      fontSize: 18,
+              Row(
+                children: [
+                  SizedBox(
+                    width: 250,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
+                        labelText: "Type here",
+                        labelStyle: TextStyle(
+                          fontFamily: "Nunito",
+                          color: Color(0xFFFA9541),
+                          fontSize: 18,
+                        ),
+                      ),
                     ),
                   ),
-                ),
+
+                ],
               ),
             ],
           ),
