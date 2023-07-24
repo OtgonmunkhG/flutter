@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wordfind_app/pages/welcome_page.dart';
-import 'package:wordfind_app/widgets/intro.dart';
+import 'package:wordfind_app/pages/intro.dart';
 
 void main() {
   runApp(const MyApp());

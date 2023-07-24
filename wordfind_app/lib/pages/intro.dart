@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wordfind_app/widgets/Gradient_letter.dart';
-import 'package:flutter/src/rendering/box.dart';
 
 class IntroductionPage extends StatelessWidget {
   @override
@@ -48,6 +47,7 @@ class IntroductionPage extends StatelessWidget {
                       fontSize: 14.4,
                       color: Color(0xFFE48000)),
                 ),
+                Padding(padding: EdgeInsets.all(50)),
                 Image(image: AssetImage("assets/head.png")),
                 Padding(padding: EdgeInsets.all(29.0)),
                 const Text(
@@ -55,30 +55,26 @@ class IntroductionPage extends StatelessWidget {
                   style: TextStyle(color: Color(0xFFFA9541), fontSize: 20),
                 ),
                 const Padding(padding: EdgeInsets.all(8.0)),
-                ColoredBox(
-                  color: Colors.white,
-                  child: SizedBox(
-                    width: 250,
-                    height: 50,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                          borderSide: BorderSide(
-                            style: BorderStyle.none,
-                          ),
-                        ),
-                        labelText: "Type here",
-                        labelStyle: const TextStyle(
-                          fontFamily: "Nunito",
-                          color: Color(0xFFFA9541),
-                          fontSize: 18,
-                        ),
-                        icon: const Icon(
-                          Icons.clear,
-                          color: Color(0xFFFA9541),
-                          size: 24,
-                        ),
+                Container(
+                  width: 310,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                    color: Colors.white,
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      labelText: "Type here",
+                      labelStyle: const TextStyle(
+                        fontFamily: "Nunito",
+                        color: Color(0xFFFA9541),
+                        fontSize: 18,
+                      ),
+                      suffixIcon: const Icon(
+                        Icons.clear,
+                        color: Color(0xFFFA9541),
+                        size: 24,
                       ),
                     ),
                   ),
