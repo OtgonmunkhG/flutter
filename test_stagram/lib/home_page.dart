@@ -12,11 +12,30 @@ class HomePage extends StatelessWidget {
         body: Container(
           child: Column(
             children: [
-              Padding(
-                padding: EdgeInsets.only(left: 16, top: 16),
-                child: SvgPicture.asset(
-                  "assets/ic_stagram.svg",
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 16, left: 16),
+                  child: SvgPicture.asset(
+                    "assets/ic_stagram.svg",
+                    width: 107,
+                    height: 32,
+                    // alignment: Alignment.topRight,
+                  ),
                 ),
+              ),
+              // Padding(padding: EdgeInsets.all(3)),
+              Row(
+                children: [
+                 Container(
+                   width: 75,
+                   height: 75,
+                   child:  IconButton(
+                     onPressed: () {},
+                     icon: Image.asset("assets/addstory.png"),
+                   ),
+                 ),
+                ],
               ),
             ],
           ),

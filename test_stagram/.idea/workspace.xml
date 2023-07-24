@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d8b6006-1e4f-445d-aa4c-85d3c40a02f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Rubik-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/ic_stagram.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/home_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/addstory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/story_add.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +57,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/assets/fonts" />
     </key>
   </component>
