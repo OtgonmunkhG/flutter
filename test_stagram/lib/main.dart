@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: "Stagram home page",
         theme: ThemeData(),
-        home: HomePage(),
+        home: HomePage(23, "joshua_l", "Hava a nice day"),
       );
   }
 

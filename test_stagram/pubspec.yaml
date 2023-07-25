@@ -65,7 +65,8 @@ flutter:
     - assets/ic_stagram.svg
     - assets/story_add.png
     - assets/addstory.png
-    - assets/profile_pic.png
+    - assets/photo2.png
+    - assets/profile_img.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
