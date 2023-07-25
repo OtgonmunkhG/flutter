@@ -30,12 +30,24 @@ class HomePage extends StatelessWidget {
                  Container(
                    width: 75,
                    height: 75,
-                   child:  IconButton(
-                     onPressed: () {},
-                     icon: Image.asset("assets/addstory.png"),
-                   ),
+                   // child:  IconButton(
+                   //   onPressed: () {},
+                   //   icon: Image.asset("assets/addstory.png"),
+                   // ),
+                   child: Text("Story section"),
                  ),
                 ],
+              ),
+              Padding(padding: EdgeInsets.all(26.0)),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Row(
+                  children: [
+                    Image(image: AssetImage("assets/profile_pic.png")),
+                    Padding(padding: EdgeInsets.only(left:10 )),
+                    Text("Төгөлдөр"),
+                  ],
+                ),
               ),
             ],
           ),
