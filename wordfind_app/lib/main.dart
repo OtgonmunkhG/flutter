@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: "Ribeye"),
       home: Scaffold(
         body: Center(
-          // child: WelcomePage(),
-          child: IntroductionPage(),
+          child: WelcomePage(),
+          // child: IntroductionPage(),
         ),
         // appBar: AppBar(
         //   title: Text(

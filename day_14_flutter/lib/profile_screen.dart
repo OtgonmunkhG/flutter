@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -18,42 +16,48 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-
   Widget _buildProfileImage(BuildContext context) {
     return Container(
       width: 200,
       height: 200,
       child: ClipOval(
-        child: Image.asset("assets/dog.jpg", fit: BoxFit.fitWidth,),
+        child: Image.asset(
+          "assets/dog.jpg",
+          fit: BoxFit.fitWidth,
+        ),
       ),
     );
   }
 
   Widget _buildProfileDetails(BuildContext context) {
-    return Padding(padding: EdgeInsets.all(20),
-        child: Column(
+    return Padding(
+      padding: EdgeInsets.all(20),
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("Wolfram Barkovich", style: TextStyle(
-              fontSize: 35,
-              fontWeight: FontWeight.w600
-            ),),
-
-            _buildDetailsRow("Age", "4"),
-            _buildDetailsRow("Status", "GoodBoy"),
-
-          ],
-    ),
+        children: [
+          Text(
+            "Wolfram Barkovich",
+            style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
+          ),
+          _buildDetailsRow("Age", "4"),
+          _buildDetailsRow("Status", "GoodBoy"),
+        ],
+      ),
     );
   }
 
   Widget _buildDetailsRow(String heading, String value) {
     return Row(
       children: [
-        Text("$heading", style: TextStyle(
-          fontWeight: FontWeight.bold,
-        ),),
-        Text("$value", )
+        Text(
+          "$heading",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          "$value",
+        )
       ],
     );
   }
@@ -70,14 +74,17 @@ class ProfileScreen extends StatelessWidget {
   }
 
   Widget _buildIcon(IconData icon, String text) {
-    return Padding(padding: EdgeInsets.all(20),
+    return Padding(
+      padding: EdgeInsets.all(20),
       child: Column(
         children: [
-          Icon(icon, size: 40,),
+          Icon(
+            icon,
+            size: 40,
+          ),
           Text(text),
         ],
       ),
-
     );
   }
 }
