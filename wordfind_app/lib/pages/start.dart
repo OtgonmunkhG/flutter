@@ -6,22 +6,27 @@ class IntroductionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: Container(
+        margin: EdgeInsets.only(top: 5),
         width: 32,
         height: 32,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           color: Color(0xFFFA9541),
         ),
-        child: const Icon(
-          Icons.arrow_back_outlined,
+        child: IconButton(
+          padding: EdgeInsets.all(0),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back_outlined),
           color: Colors.white,
         ),
       ),
-      backgroundColor: Color(0x4cfbb478),
       body: SafeArea(
         child: Center(
           child: Container(
             decoration: const BoxDecoration(
+              color: Color(0x4cfbb478),
                 image: DecorationImage(
               image: AssetImage("assets/back2.png"),
             )),
@@ -63,7 +68,9 @@ class IntroductionPage extends StatelessWidget {
                     color: Colors.white,
                   ),
                   child: TextField(
+                    textAlign: TextAlign.center,
                     decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 25, right: 25),
                       border: InputBorder.none,
                       labelText: "Type here",
                       labelStyle: const TextStyle(

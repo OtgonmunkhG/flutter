@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordfind_app/pages/start.dart';
 import 'package:wordfind_app/widgets/Gradient_letter.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -17,7 +18,11 @@ class WelcomePage extends StatelessWidget {
           borderRadius: BorderRadius.circular(25),
         ),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context,
+            MaterialPageRoute(builder: (context) =>  IntroductionPage(),)
+            );
+          },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.transparent,
             elevation: 0,
@@ -34,9 +39,11 @@ class WelcomePage extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor: Color(0x4cfbb478),
+      // backgroundColor: Color(0x4cfbb478),
       body: Container(
+
         decoration: const BoxDecoration(
+            color: Color(0x4cfbb478),
             image: DecorationImage(
           image: AssetImage("assets/back1.png"),
           fit: BoxFit.contain,
