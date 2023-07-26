@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordfind_app/pages/game.dart';
 
 class StartButton extends StatelessWidget {
   @override
@@ -16,9 +17,9 @@ class StartButton extends StatelessWidget {
         ),
         child: ElevatedButton(
           onPressed: () {
-            // Navigator.push(context,
-            //      MaterialPageRoute(builder: (context) =>  IntroductionPage(),)
-            // );
+            Navigator.push(context,
+                 MaterialPageRoute(builder: (context) => GamePage(),)
+            );
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.transparent,
