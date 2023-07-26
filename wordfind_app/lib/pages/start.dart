@@ -1,7 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:wordfind_app/widgets/Gradient_letter.dart';
+import 'package:hive/hive.dart';
+import '../widgets/startButton.dart';
 
-class IntroductionPage extends StatelessWidget {
+class IntroductionPage extends StatefulWidget {
+  @override
+  State<IntroductionPage> createState() => _IntroductionPageState();
+}
+
+class _IntroductionPageState extends State<IntroductionPage> {
+  @override
+
+  final _myBox = Hive.box("box");
+  String name = "";
+  final _textController = TextEditingController();
+  bool isReady = false;
+
+
+  void writeName() {
+    _myBox.put("Name", name);
+  }
+
+  void start() {
+    setState(() {
+      isReady = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,10 +51,10 @@ class IntroductionPage extends StatelessWidget {
         child: Center(
           child: Container(
             decoration: const BoxDecoration(
-              color: Color(0x4cfbb478),
+                color: Color(0x4cfbb478),
                 image: DecorationImage(
-              image: AssetImage("assets/back2.png"),
-            )),
+                  image: AssetImage("assets/back2.png"),
+                )),
             child: Column(
               children: [
                 const Row(
@@ -68,8 +93,17 @@ class IntroductionPage extends StatelessWidget {
                     color: Colors.white,
                   ),
                   child: TextField(
+                    controller: _textController,
+                    onChanged: (text) {
+                      setState(() {
+                        name = text;
+                        writeName();
+                      });
+                    },
+                    onSubmitted: (_) =>  start(),
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
+                      floatingLabelBehavior: FloatingLabelBehavior.never,
                       contentPadding: EdgeInsets.only(left: 25, right: 25),
                       border: InputBorder.none,
                       labelText: "Type here",
@@ -78,14 +112,20 @@ class IntroductionPage extends StatelessWidget {
                         color: Color(0xFFFA9541),
                         fontSize: 18,
                       ),
-                      suffixIcon: const Icon(
-                        Icons.clear,
-                        color: Color(0xFFFA9541),
-                        size: 24,
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.clear, color: Color(0xFFFA9541),),
+                        onPressed: () {
+                          _textController.clear();
+                        },
+                        // Icons.clear,
+                        // color: Color(0xFFFA9541),
+                        // size: 24,
                       ),
                     ),
                   ),
                 ),
+                if(isReady)
+                  StartButton(),
               ],
             ),
           ),
@@ -95,3 +135,4 @@ class IntroductionPage extends StatelessWidget {
     );
   }
 }
+

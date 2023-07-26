@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:wordfind_app/pages/welcome_page.dart';
-import 'package:wordfind_app/pages/start.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+
+  await Hive.openBox("box");
+
   runApp(const MyApp());
 }
 
