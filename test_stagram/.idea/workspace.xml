@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d8b6006-1e4f-445d-aa4c-85d3c40a02f5" name="Changes" comment="" />
+    <list default="true" id="1d8b6006-1e4f-445d-aa4c-85d3c40a02f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/fonts/Lobster-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/wigets/home_page_contents.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/wigets/home_page_scroll.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/wigets/stack_image.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scroll_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wordfind_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../wordfind_app/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,8 +62,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/lib/wigets" />
       <recent name="$PROJECT_DIR$/assets/fonts" />
+      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

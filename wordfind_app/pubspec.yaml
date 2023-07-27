@@ -85,6 +85,7 @@ flutter:
     - family: Ribeye
       fonts:
         - asset: assets/fonts/Ribeye-Regular.ttf
+
     - family: Nunito
       fonts:
         - asset: assets/fonts/Nunito-Bold.ttf
