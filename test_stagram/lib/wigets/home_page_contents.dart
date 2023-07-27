@@ -41,14 +41,15 @@ class HomePageContents extends StatelessWidget {
 
         Container(
           height: 375,
-          width: double.infinity,
+          width: double.maxFinite ,
           margin: EdgeInsets.only(top: 12),
-          decoration: BoxDecoration(
-            image: const DecorationImage(
-                image: const AssetImage("assets/photo2.png"),
-                fit: BoxFit.cover,
-            ),
-          ),
+          // decoration: BoxDecoration(
+          //   image: const DecorationImage(
+          //       image: const AssetImage("assets/photo2.png"),
+          //
+          //   ),
+          // ),
+          child: Image.asset("assets/photo2.png", fit: BoxFit.cover,),
         ),
         Container(
           // margin: EdgeInsets.only(left: 16),
