@@ -9,8 +9,8 @@ class FlexScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text("Expanded and Flexible")
-
       ),
       body : Column(
         crossAxisAlignment: CrossAxisAlignment.start,
