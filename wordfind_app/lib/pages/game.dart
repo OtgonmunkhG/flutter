@@ -44,10 +44,27 @@ class _GamePageState extends State<GamePage> {
             ),
             child: Column(
               children: [
-                Image(
-                  image: AssetImage("assets/IMG.png"),
-                  width: 265,
-                  height: 265,
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(0),
+                      width: 32,
+                      height: 32,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color(0xFFFA9541)
+                      ),
+                      child: IconButton(
+                        padding: EdgeInsets.all(0),
+                          onPressed: () {},
+                          icon: Icon(Icons.arrow_back_outlined),color: Colors.white, disabledColor: Colors.grey,),
+                    ),
+                    Image(
+                      image: AssetImage("assets/IMG.png"),
+                      width: 265,
+                      height: 265,
+                    ),
+                  ],
                 ),
               ],
             ),
