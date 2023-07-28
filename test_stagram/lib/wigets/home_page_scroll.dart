@@ -22,8 +22,7 @@ class HomePageScrollWidget extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 25,
-                    fontFamily: "Lobster"
-                ),
+                    fontFamily: "Lobster"),
               ),
             ),
           ),
@@ -42,7 +41,7 @@ class HomePageScrollWidget extends StatelessWidget {
                     );
                   },
                   itemBuilder: (context, index) {
-                    return buildCard();
+                    return buildPost();
                   },
                 ),
               ],
@@ -53,7 +52,7 @@ class HomePageScrollWidget extends StatelessWidget {
     );
   }
 
-  Widget buildCard() => Container(
+  Widget buildPost() => Container(
         child: HomePageContents(23, "Othoo", "Hello world"),
       );
 }
