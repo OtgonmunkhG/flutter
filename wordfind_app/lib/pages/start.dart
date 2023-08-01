@@ -10,12 +10,10 @@ class IntroductionPage extends StatefulWidget {
 
 class _IntroductionPageState extends State<IntroductionPage> {
   @override
-
   final _myBox = Hive.box("box");
   String name = "";
   final _textController = TextEditingController();
   bool isReady = false;
-
 
   void writeName() {
     _myBox.put("Name", name);
@@ -54,6 +52,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
                 color: Color(0x4cfbb478),
                 image: DecorationImage(
                   image: AssetImage("assets/back2.png"),
+                  fit: BoxFit.cover
                 )),
             child: Column(
               children: [
@@ -100,7 +99,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
                         writeName();
                       });
                     },
-                    onSubmitted: (_) =>  start(),
+                    onSubmitted: (_) => start(),
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       floatingLabelBehavior: FloatingLabelBehavior.never,
@@ -113,7 +112,10 @@ class _IntroductionPageState extends State<IntroductionPage> {
                         fontSize: 18,
                       ),
                       suffixIcon: IconButton(
-                        icon: Icon(Icons.clear, color: Color(0xFFFA9541),),
+                        icon: Icon(
+                          Icons.clear,
+                          color: Color(0xFFFA9541),
+                        ),
                         onPressed: () {
                           _textController.clear();
                         },
@@ -124,8 +126,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
                     ),
                   ),
                 ),
-                if(isReady)
-                  StartButton(),
+                if (isReady)  StartButton(),
               ],
             ),
           ),
@@ -135,4 +136,3 @@ class _IntroductionPageState extends State<IntroductionPage> {
     );
   }
 }
-
