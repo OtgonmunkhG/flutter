@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:wordfind_app/pages/welcome_page.dart';
-import 'package:wordfind_app/pages/intro.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+
+  await Hive.openBox("box");
+
   runApp(const MyApp());
 }
 
@@ -16,8 +21,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: "Ribeye"),
       home: Scaffold(
         body: Center(
-          // child: WelcomePage(),
-          child: IntroductionPage(),
+          child: WelcomePage(),
+          // child: IntroductionPage(),
         ),
         // appBar: AppBar(
         //   title: Text(
