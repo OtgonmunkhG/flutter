@@ -1,15 +1,39 @@
 import 'package:flutter/material.dart';
 
-class InputField extends StatelessWidget {
-  const InputField({super.key});
+class InputField extends StatefulWidget {
+  void onSubmitted(String) {
 
+}
+   InputField({ super.key});
+
+  @override
+  State<InputField> createState() => _InputFieldState();
+}
+
+class _InputFieldState extends State<InputField> {
+  late TextEditingController _textEditingController ;
+  @override
+  void initState() {
+
+    super.initState();
+    _textEditingController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _textEditingController.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 310,
       height: 50,
       child: TextField(
-        onSubmitted: (String value) {},
+        onSubmitted: (String value) {
+          widget.onSubmitted(value);
+        },
+        controller: _textEditingController,
         maxLines: 1,
         style: TextStyle(
           color: Color(0xFFE86B02),

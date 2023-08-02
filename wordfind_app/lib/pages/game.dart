@@ -78,28 +78,6 @@ class _GamePageState extends State<GamePage> {
                         height: 25,
                         child: Image.asset("assets/orange.png"),
                       ),
-
-                    //
-                    // Container(
-                    //   width: 25,
-                    //   height: 25,
-                    //   child: Image.asset("assets/orange.png"),
-                    // ),
-                    // Container(
-                    //   width: 25,
-                    //   height: 25,
-                    //   child: Image.asset("assets/orange.png"),
-                    // ),
-                    // Container(
-                    //   width: 25,
-                    //   height: 25,
-                    //   child: Image.asset("assets/orange.png"),
-                    // ),
-                    // Container(
-                    //   width: 25,
-                    //   height: 25,
-                    //   child: Image.asset("assets/orange.png"),
-                    // )
                   ],
                 ),
                 Padding(padding: EdgeInsets.all(31)),

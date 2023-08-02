@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:wordfind_app/widgets/Gradient_letter.dart';
 import 'package:hive/hive.dart';
+import '../models/user_model.dart';
 import '../widgets/startButton.dart';
 
 class IntroductionPage extends StatefulWidget {
+  User newUser = User("Guest", 0);
   @override
   State<IntroductionPage> createState() => _IntroductionPageState();
 }
 
+
+// Use HIVE
 class _IntroductionPageState extends State<IntroductionPage> {
   @override
   final _myBox = Hive.box("box");
@@ -134,5 +138,11 @@ class _IntroductionPageState extends State<IntroductionPage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
     );
+  }
+
+  _createUser(String userName) {
+    setState(() {
+      widget.newUser = userName as User;
+    });
   }
 }
