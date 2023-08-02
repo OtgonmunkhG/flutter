@@ -72,32 +72,34 @@ class _GamePageState extends State<GamePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    for(int i = 0; i < 5; i++)
+                      Container(
+                        width: 25,
+                        height: 25,
+                        child: Image.asset("assets/orange.png"),
+                      ),
 
-                    Container(
-                      width: 25,
-                      height: 25,
-                      child: Image.asset("assets/orange.png"),
-                    ),
-                    Container(
-                      width: 25,
-                      height: 25,
-                      child: Image.asset("assets/orange.png"),
-                    ),
-                    Container(
-                      width: 25,
-                      height: 25,
-                      child: Image.asset("assets/orange.png"),
-                    ),
-                    Container(
-                      width: 25,
-                      height: 25,
-                      child: Image.asset("assets/orange.png"),
-                    ),
-                    Container(
-                      width: 25,
-                      height: 25,
-                      child: Image.asset("assets/orange.png"),
-                    )
+                    //
+                    // Container(
+                    //   width: 25,
+                    //   height: 25,
+                    //   child: Image.asset("assets/orange.png"),
+                    // ),
+                    // Container(
+                    //   width: 25,
+                    //   height: 25,
+                    //   child: Image.asset("assets/orange.png"),
+                    // ),
+                    // Container(
+                    //   width: 25,
+                    //   height: 25,
+                    //   child: Image.asset("assets/orange.png"),
+                    // ),
+                    // Container(
+                    //   width: 25,
+                    //   height: 25,
+                    //   child: Image.asset("assets/orange.png"),
+                    // )
                   ],
                 ),
                 Padding(padding: EdgeInsets.all(31)),
