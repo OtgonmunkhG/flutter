@@ -13,7 +13,11 @@ import 'package:test_stagram/main.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
+<<<<<<< HEAD
+    await tester.pumpWidget(const MyApp());
+=======
     await tester.pumpWidget( MyApp());
+>>>>>>> f58ac413544ce8edb6e410de1fd90749c88a6771
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

@@ -24,8 +24,34 @@
       <excludeFolder url="file://$MODULE_DIR$/day_08/build" />
       <excludeFolder url="file://$MODULE_DIR$/day_08/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/day_08/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_instagram/build" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_instagram/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_instagram/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/day_11_flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/day_11_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/day_11_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_instagram/windows/flutter/ephemeral/.plugin_symlinks/firebase_core/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_instagram/windows/flutter/ephemeral/.plugin_symlinks/firebase_core/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_instagram/windows/flutter/ephemeral/.plugin_symlinks/firebase_core/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/day_10_thornado/build" />
+      <excludeFolder url="file://$MODULE_DIR$/day_10_thornado/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/day_10_thornado/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/day_13/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/day_13/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/day_13/build" />
+      <excludeFolder url="file://$MODULE_DIR$/day_10_dart/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/day_10_dart/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/day_10_dart/build" />
+      <excludeFolder url="file://$MODULE_DIR$/wordfind_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/wordfind_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/wordfind_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_instagram/windows/flutter/ephemeral/.plugin_symlinks/firebase_core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_instagram/windows/flutter/ephemeral/.plugin_symlinks/firebase_core/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_instagram/windows/flutter/ephemeral/.plugin_symlinks/firebase_core/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>
