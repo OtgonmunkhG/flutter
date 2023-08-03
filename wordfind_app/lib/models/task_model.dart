@@ -31,6 +31,7 @@ class TaskModel {
       isFull = false;
       return complete;
     }
+    print(complete);
     this.isFull = true;
     String answeredString =
         puzzles.map((puzzle) => puzzle.currentValue).join("");
@@ -44,4 +45,10 @@ class TaskModel {
         TaskModel(answer: answer, pathImage: pathImage, question: question);
     return taskObject;
   }
+}
+
+void main() {
+  final taskModel = TaskModel(pathImage: "null", question: "question", answer: "answer");
+  print(taskModel.fieldCompleteCorrect());
+  print("hello");
 }
