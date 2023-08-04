@@ -5,7 +5,7 @@ import '../models/user_model.dart';
 import '../widgets/startButton.dart';
 
 class IntroductionPage extends StatefulWidget {
-  User newUser = User("Guest", 0);
+  User newUser = User(userName: "Name", score: 0);
   @override
   State<IntroductionPage> createState() => _IntroductionPageState();
 }

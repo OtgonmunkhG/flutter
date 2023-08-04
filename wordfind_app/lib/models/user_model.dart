@@ -1,7 +1,10 @@
 
 
 class User {
-  User( this.userName, this.score,);
+  User({
+    required this.userName,
+    required this.score,
+  });
   String userName;
   int score;
 }

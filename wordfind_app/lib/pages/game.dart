@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:wordfind_app/widgets/gradient_text.dart';
+
+import '../models/hive_methods.dart';
+import '../models/user_model.dart';
 
 class GamePage extends StatefulWidget {
   const GamePage({super.key});
@@ -9,6 +13,8 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePageState extends State<GamePage> {
+  final myBox = Hive.box("box");
+  late String name = myBox.get("Name", defaultValue: "");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +57,7 @@ class _GamePageState extends State<GamePage> {
                             // color: Colors.white,
                           ),
                         ),
-                        GradientText(text: "Name", size: 24),
+                        GradientText(text: "$name", size: 24),
                         Container(
                           child: Row(
                             children: [
