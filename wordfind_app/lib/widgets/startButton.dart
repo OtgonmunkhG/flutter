@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:wordfind_app/pages/game.dart';
 
 class StartButton extends StatelessWidget {
+  // final newUser;
+  // const StartButton(this.newUser);
   @override
   Widget build(BuildContext context) {
     return  Container(
