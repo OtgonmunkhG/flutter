@@ -32,6 +32,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       floatingActionButton: Container(
         margin: EdgeInsets.only(top: 5),
         width: 32,
@@ -52,6 +53,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
       body: SafeArea(
         child: Center(
           child: Container(
+            height: double.maxFinite,
             decoration: const BoxDecoration(
                 color: Color(0x4cfbb478),
                 image: DecorationImage(
