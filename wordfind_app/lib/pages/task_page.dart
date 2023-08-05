@@ -1,7 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:wordfind_app/widgets/task_widget.dart';
 
-class TaskPage extends StatelessWidget {
-  const TaskPage({super.key});
+import '../models/task_model.dart';
+import '../models/user_model.dart';
+import '../widgets/question.dart';
+
+class TaskPage extends StatefulWidget {
+  @override
+  State<TaskPage> createState() => _TaskPageState();
+}
+
+class _TaskPageState extends State<TaskPage> {
+  GlobalKey<TaskWidgetState> globalKey = GlobalKey();
+  late List<TaskModel> listQuestions;
+  late User user;
+
+  @override
+  void initState() {
+    listQuestions = question;
+    // user = widget.user;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +45,19 @@ class TaskPage extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-                child: Container(
+              child: LayoutBuilder(builder: (context, constraints) {
+                return Container(
+                  height: 400,
+                  child: TaskWidget(
+                      constraints.biggest,
+                      listQuestions
+                          .map((question) => question.clone())
+                          .toList(),
+                      Key: globalKey),
+                );
+              }),
+            ),
+            Container(
               width: double.maxFinite,
               padding: EdgeInsets.only(bottom: 10),
               color: Colors.white,
@@ -42,7 +73,13 @@ class TaskPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      globalKey.currentState?.generatePuzzle(
+                        loop: listQuestions
+                            .map((question) => question.clone())
+                            .toList(),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.transparent,
                         elevation: 0,
@@ -56,7 +93,7 @@ class TaskPage extends StatelessWidget {
                   ),
                 ),
               ),
-            ))
+            )
           ],
         ),
       ),

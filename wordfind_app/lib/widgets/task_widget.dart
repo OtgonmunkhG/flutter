@@ -7,14 +7,14 @@ import '../models/task_model.dart';
 
 class TaskWidget extends StatefulWidget {
   final Size size;
-  final List<TaskModel> listQuestion;
-  const TaskWidget( this.size,  this.listQuestion, {super.key, required Key Key} );
+  final List<TaskModel> listQuestions;
+  const TaskWidget( this.size,  this.listQuestions, {super.key, required Key Key} );
 
   @override
-  State<TaskWidget> createState() => _TaskWidgetState();
+  State<TaskWidget> createState() => TaskWidgetState();
 }
 
-class _TaskWidgetState extends State<TaskWidget> {
+class TaskWidgetState extends State<TaskWidget> {
   late Size size;
   late List<TaskModel> listQuestion;
   int indexQues = 0;
@@ -23,7 +23,7 @@ class _TaskWidgetState extends State<TaskWidget> {
   void initState() {
     super.initState();
     size = widget.size;
-    listQuestion = widget.listQuestion;
+    listQuestion = widget.listQuestions;
     generatePuzzle();
   }
 
