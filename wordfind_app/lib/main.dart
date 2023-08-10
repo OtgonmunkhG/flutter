@@ -4,8 +4,8 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:wordfind_app/pages/welcome_page.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-
   await Hive.openBox("box");
 
   runApp(const MyApp());

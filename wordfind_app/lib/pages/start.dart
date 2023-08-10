@@ -4,7 +4,8 @@ import 'package:hive/hive.dart';
 import '../models/user_model.dart';
 import '../widgets/startButton.dart';
 
-User newUser = User("Guest", 0);
+User newUser = User(score: 0);
+
 class IntroductionPage extends StatefulWidget {
 
   @override
@@ -33,6 +34,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       floatingActionButton: Container(
         margin: EdgeInsets.only(top: 5),
         width: 32,
@@ -53,6 +55,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
       body: SafeArea(
         child: Center(
           child: Container(
+            height: double.maxFinite,
             decoration: const BoxDecoration(
                 color: Color(0x4cfbb478),
                 image: DecorationImage(
@@ -141,9 +144,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
     );
   }
 
-  _createUser(String userName) {
-    setState(() {
-      newUser = userName as User;
-    });
-  }
+
+
+
 }

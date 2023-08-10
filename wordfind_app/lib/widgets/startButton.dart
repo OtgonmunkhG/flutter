@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:wordfind_app/pages/game.dart';
+import 'package:wordfind_app/pages/task_page.dart';
 
 class StartButton extends StatelessWidget {
+  // final newUser;
+  // const StartButton(this.newUser);
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -17,9 +20,10 @@ class StartButton extends StatelessWidget {
           ),
           child: ElevatedButton(
             onPressed: () {
-              Navigator.push(context,
-                   MaterialPageRoute(builder: (context) => GamePage(),)
-              );
+              // Navigator.push(context,
+              //      MaterialPageRoute(builder: (context) => GamePage(),)
+              // );
+              Navigator.push(context, MaterialPageRoute(builder: (context) => TaskPage()));
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.transparent,

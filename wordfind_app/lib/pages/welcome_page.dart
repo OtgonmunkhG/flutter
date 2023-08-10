@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:wordfind_app/pages/start.dart';
 import 'package:wordfind_app/widgets/Gradient_letter.dart';
 
 class WelcomePage extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,3 +98,5 @@ class WelcomePage extends StatelessWidget {
     );
   }
 }
+
+
