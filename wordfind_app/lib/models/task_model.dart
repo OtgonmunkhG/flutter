@@ -34,9 +34,9 @@ class TaskModel {
     this.isFull = true;
     String answeredString =
         puzzles.map((puzzle) => puzzle.currentValue).join("");
-    if (answeredString == this.answer) {
+    answeredString == this.answer;
       return answeredString;
-    }
+
   }
 
   TaskModel clone() {
