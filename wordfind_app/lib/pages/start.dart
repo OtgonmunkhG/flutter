@@ -4,8 +4,9 @@ import 'package:hive/hive.dart';
 import '../models/user_model.dart';
 import '../widgets/startButton.dart';
 
+User newUser = User("Guest", 0);
 class IntroductionPage extends StatefulWidget {
-  User newUser = User("Guest", 0);
+
   @override
   State<IntroductionPage> createState() => _IntroductionPageState();
 }
@@ -142,7 +143,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
 
   _createUser(String userName) {
     setState(() {
-      widget.newUser = userName as User;
+      newUser = userName as User;
     });
   }
 }

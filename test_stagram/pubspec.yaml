@@ -35,19 +35,17 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  firebase_storage: ^11.2.5
+  firebase_core: ^2.15.0
+  file_picker: ^5.3.3
+  image_picker: ^1.0.1
 
-<<<<<<< HEAD
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-=======
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_svg: ^2.0.7
 
->>>>>>> f58ac413544ce8edb6e410de1fd90749c88a6771
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -68,16 +66,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-<<<<<<< HEAD
-  # assets:
-  #   - images/a_dot_burr.jpeg
-=======
-  assets:
+
+assets:
     - assets/ic_stagram.svg
     - assets/addstory.png
     - assets/photo.png
     - assets/profile_img.png
->>>>>>> f58ac413544ce8edb6e410de1fd90749c88a6771
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -91,20 +85,17 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-<<<<<<< HEAD
   # fonts:
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
-=======
-  fonts:
+fonts:
      - family: Rubik
        fonts:
         - asset: assets/fonts/Rubik-Regular.ttf
      - family: Lobster
        fonts:
          - asset: assets/fonts/Lobster-Regular.ttf
->>>>>>> f58ac413544ce8edb6e410de1fd90749c88a6771
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
