@@ -5,6 +5,7 @@ import '../models/user_model.dart';
 import '../widgets/startButton.dart';
 
 User newUser = User(score: 0);
+
 class IntroductionPage extends StatefulWidget {
 
   @override
@@ -142,5 +143,8 @@ class _IntroductionPageState extends State<IntroductionPage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
     );
   }
-  
+
+
+
+
 }

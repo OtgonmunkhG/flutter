@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
 class InputField extends StatefulWidget {
-  void onSubmitted(String) {
-
-}
-   InputField({ super.key});
+  final void Function(String) onSubmitted;
+   InputField(this.onSubmitted,{ super.key});
 
   @override
   State<InputField> createState() => _InputFieldState();

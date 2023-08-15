@@ -1,42 +1,17 @@
 import 'package:flutter/material.dart';
+import 'home_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-<<<<<<< HEAD
-void main() {
+import 'home_screen.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-      return MaterialApp(
-        home: SafeArea(
-          child: Scaffold(
-            body: Container(
-              child: Center(
-                child: Column(
-                  children: [
-
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-      );
-  }
 
 
-}
-
-
-=======
-import 'home_page.dart';
-
-void main() {
-  runApp( MyApp());
-}
 
 class MyApp extends StatelessWidget {
   @override
@@ -45,9 +20,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: "Stagram home page",
         theme: ThemeData(),
-        home: HomePage(),
+        home: HomeScreen(),
       );
   }
 
 }
->>>>>>> f58ac413544ce8edb6e410de1fd90749c88a6771

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1032606637994",
+    "project_id": "lesson-20-otgoo-flutter",
+    "storage_bucket": "lesson-20-otgoo-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032606637994:android:9d8d2687d983f15fbcd5d3",
+        "android_client_info": {
+          "package_name": "com.example.icode_gram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032606637994-433j4ljgmsfq5p18uutlkapnn3t0u98p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv_7rViDnNFWLHTUzmZLltUY-V5QK_06s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032606637994-433j4ljgmsfq5p18uutlkapnn3t0u98p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
