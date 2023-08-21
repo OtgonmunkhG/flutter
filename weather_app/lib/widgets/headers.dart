@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:weather_app/icons/icons.dart';
 import 'package:weather_app/services/weather_service.dart';
 
 class Header extends StatefulWidget {
@@ -41,10 +42,69 @@ class _HeaderState extends State<Header> {
     return AppBar(
       elevation: 0,
       toolbarHeight: MediaQuery.of(context).size.height / 3,
-      title: Padding(padding: EdgeInsets.only(top: 25), child: Column(children: [
-        _isLoading
-      ],),),
+      title: Padding(
+        padding: EdgeInsets.only(top: 25),
+        child: Column(
+          children: [
+            _isLoading
+                ? Image.asset(
+                    overcastDayIcon,
+                    height: 50,
+                  )
+                : Container(
+                    height: 50,
+                    width: 700,
+                    child: TextField(
+                      controller: _textFieldController,
+                      onSubmitted: (value) {
+                        setState(() {
+                          _isLoading = true;
+                          city = value;
+                          Future.delayed(Duration(seconds: 2), () {
+                            loadingFunction();
+                            _textFieldController.clear();
+                          });
+                        });
+                      },
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                          hintText: "Search for cities",
+                          hintStyle: TextStyle(
+                              color: Color.fromARGB(133, 255, 255, 255)),
+                          filled: true,
+                          fillColor: Color.fromARGB(18, 255, 255, 255),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                              borderRadius: BorderRadius.circular(15)),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(25),
+                              borderSide: BorderSide.none),
+                          disabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                              borderRadius: BorderRadius.circular(15)),
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              _textFieldController.clear();
+                              FocusScope.of(context).unfocus();
+                            },
+                            icon: Icon(clearIcon),
+                          ),
+                          contentPadding: EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 5)),
+                    ),
+                  ),
+            SizedBox(height: 25,),
+            notFound ? Text("not Found") : Row(children: [
+              Column(
+                children: [
+                  SizedBox(width: 200, child: Text(widget.temp.toString() + ""),)
+                ],
+              )
 
+            ],),
+          ],
+        ),
+      ),
     );
   }
 }
