@@ -110,7 +110,7 @@ class _WeatherHomePageState extends State<WeatherHomePage> {
       Timer.periodic(Duration(seconds: 2), (timer) { isDay ? day() : night();});
       Timer.periodic(Duration(seconds: 3), (timer) {getHours(); });
       Future.delayed(Duration(seconds: 2), ()async {
-        await weatherService.getWeatherData;
+        await weatherService.getWeatherData();
         setState(() {
           _isLoading = false;
         });
