@@ -46,7 +46,7 @@ class _HeaderState extends State<Header> {
         child: Column(
           children: [
             _isLoading
-                ? Image.asset(
+                ? Image.network(
                     overcastDayIcon,
                     height: 50,
                   )
@@ -93,6 +93,7 @@ class _HeaderState extends State<Header> {
                       ),
                     ),
                   ),
+            // Text(widget.city_name, style: TextStyle(color: Colors.black, fontSize: 30),),
             SizedBox(
               height: 25,
             ),
@@ -102,6 +103,7 @@ class _HeaderState extends State<Header> {
                     children: [
                       Column(
                         children: [
+                          Text(widget.city_name, style: TextStyle(color: Colors.red),),
                           SizedBox(
                             width: 200,
                             child: Text(
@@ -137,7 +139,7 @@ class _HeaderState extends State<Header> {
                           height: 150,
                           child: Column(
                             children: [
-                              Image.asset(
+                              Image.network(
                                 widget.descriptionImg.toString(),
                                 fit: BoxFit.cover,
                               ),
@@ -148,7 +150,7 @@ class _HeaderState extends State<Header> {
                             ],
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
           ],

@@ -23,7 +23,7 @@ class Weather {
     return Weather(
       uvIndex:  json['current']["uv"],
       city: json["location"]["name"],
-      date: json["location"]["locationtime"],
+      date: json["location"]["localtime"],
       forecast: json["forecast"]["forecastday"][0]["hour"],
       humidity: json["current"]["humidity"],
       state: json["location"]["region"],

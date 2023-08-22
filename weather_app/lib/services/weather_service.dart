@@ -10,11 +10,13 @@ class WeatherService {
     final response = await http.get(uri);
     if (response.statusCode == 200) {
       print("END EHELLEEE");
-      return Weather.fromJson(jsonDecode(response.body));
+      print(Weather.fromJson(jsonDecode(response.body)));
+      return  Weather.fromJson(jsonDecode(response.body));
+
     } else {
       throw Exception("Failed");
     }
   }
 }
 
-String city = "Mongolia";
+String city = "Los Angeles";
