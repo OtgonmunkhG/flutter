@@ -34,8 +34,8 @@ class InformationsCard extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.network(
-                      "https://www.pexels.com/photo/top-view-of-a-woman-playing-the-piano-17480199",
+                    Image.asset(
+                      "assets/get-started.png",
                       height: 40,
                       width: 40,
                       fit: BoxFit.cover,
@@ -68,8 +68,8 @@ class InformationsCard extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.network(
-                      "https://www.pexels.com/photo/digital-camera-mounted-in-a-tripod-14111067",
+                    Image.asset(
+                      "assets/get-started.png",
                       height: 40,
                       width: 40,
                       fit: BoxFit.cover,
@@ -92,8 +92,8 @@ class InformationsCard extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.network(
-                      "https://www.pexels.com/photo/sea-black-and-white-dawn-landscape-17118488",
+                    Image.asset(
+                      "assets/get-started.png",
                       width: 40,
                       height: 40,
                       fit: BoxFit.cover,

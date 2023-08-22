@@ -31,6 +31,7 @@ class _WeatherHomePageState extends State<WeatherHomePage> {
 
   Future getWeather() async {
     weather = await weatherService.getWeatherData();
+    print(weather);
     setState(() {
       getWeather();
       _isLoading = false;
@@ -166,7 +167,7 @@ class _WeatherHomePageState extends State<WeatherHomePage> {
                       child: ListView.builder(
                           scrollDirection: Axis.vertical,
                           physics: BouncingScrollPhysics(),
-                          itemCount: weather.forecast.length - hour - 1,
+                          itemCount: 2,
                           itemBuilder: (context, index) =>
                               SingleChildScrollView(
                                 padding: EdgeInsets.symmetric(
