@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:weather_app/icons/icons.dart';
 import 'package:weather_app/services/weather_service.dart';
 
@@ -68,40 +67,90 @@ class _HeaderState extends State<Header> {
                       },
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                          hintText: "Search for cities",
-                          hintStyle: TextStyle(
-                              color: Color.fromARGB(133, 255, 255, 255)),
-                          filled: true,
-                          fillColor: Color.fromARGB(18, 255, 255, 255),
-                          focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide.none,
-                              borderRadius: BorderRadius.circular(15)),
-                          enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(25),
-                              borderSide: BorderSide.none),
-                          disabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide.none,
-                              borderRadius: BorderRadius.circular(15)),
-                          suffixIcon: IconButton(
-                            onPressed: () {
-                              _textFieldController.clear();
-                              FocusScope.of(context).unfocus();
-                            },
-                            icon: Icon(clearIcon),
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                              horizontal: 15, vertical: 5)),
+                        hintText: "Search for cities",
+                        hintStyle: TextStyle(
+                            color: Color.fromARGB(133, 255, 255, 255)),
+                        filled: true,
+                        fillColor: Color.fromARGB(18, 255, 255, 255),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(15)),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                            borderSide: BorderSide.none),
+                        disabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(15)),
+                        suffixIcon: IconButton(
+                          onPressed: () {
+                            _textFieldController.clear();
+                            FocusScope.of(context).unfocus();
+                          },
+                          icon: Icon(clearIcon),
+                        ),
+                        contentPadding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                      ),
                     ),
                   ),
-            SizedBox(height: 25,),
-            notFound ? Text("not Found") : Row(children: [
-              Column(
-                children: [
-                  SizedBox(width: 200, child: Text(widget.temp.toString() + ""),)
-                ],
-              )
-
-            ],),
+            SizedBox(
+              height: 25,
+            ),
+            notFound
+                ? Text("not Found")
+                : Row(
+                    children: [
+                      Column(
+                        children: [
+                          SizedBox(
+                            width: 200,
+                            child: Text(
+                              widget.temp.toString() + "℃",
+                              style: const TextStyle(
+                                  fontSize: 60, fontWeight: FontWeight.w200),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 200,
+                            child: Text(
+                              widget.city_name,
+                              style: TextStyle(fontSize: 25),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          SizedBox(
+                            width: 200,
+                            child: Text(
+                              widget.state_name,
+                              style: TextStyle(fontWeight: FontWeight.w200),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 15),
+                        child: Container(
+                          width: 120,
+                          height: 150,
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                widget.descriptionImg.toString(),
+                                fit: BoxFit.cover,
+                              ),
+                              Text(
+                                widget.description,
+                                textAlign: TextAlign.center,
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
           ],
         ),
       ),
