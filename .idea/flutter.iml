@@ -48,6 +48,24 @@
       <excludeFolder url="file://$MODULE_DIR$/icode_instagram/windows/flutter/ephemeral/.plugin_symlinks/firebase_core/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/icode_instagram/windows/flutter/ephemeral/.plugin_symlinks/firebase_core/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/icode_instagram/windows/flutter/ephemeral/.plugin_symlinks/firebase_core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/day_17_flutter_navigation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/day_17_flutter_navigation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/day_17_flutter_navigation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test_stagram/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test_stagram/build" />
+      <excludeFolder url="file://$MODULE_DIR$/test_stagram/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/day_15_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/day_15_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/day_15_flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/day_14_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/day_14_flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/day_14_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_gram/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_gram/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/icode_gram/build" />
+      <excludeFolder url="file://$MODULE_DIR$/weather_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/weather_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/weather_app/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

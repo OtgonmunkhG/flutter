@@ -1,3 +1,4 @@
+import 'package:day_14_flutter/star.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -5,13 +6,23 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          _buildProfileImage(context),
-          _buildProfileDetails(context),
-          _buildActions(context),
-        ],
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
+          children: [
+            Image.network('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+            Transform.translate(offset: const Offset(0, 100),
+              child: Column(
+                children: [
+                  _buildProfileImage(context),
+                  _buildProfileDetails(context),
+                  _buildActions(context),
+                ],
+              ),
+            ),
+
+          ],
+        )
       ),
     );
   }
@@ -40,6 +51,21 @@ class ProfileScreen extends StatelessWidget {
             style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
           ),
           _buildDetailsRow("Age", "4"),
+          StarRanking(value: 5),
+          SizedBox(
+            width: 135,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Star(color: Colors.deepPurple, size: 25),
+                Star(color: Colors.deepPurpleAccent, size: 25),
+                Star(color: Colors.deepOrangeAccent, size: 25),
+                Star(color: Colors.deepOrangeAccent, size: 25),
+                Star(color: Colors.blueAccent, size: 25),
+              ],
+            ),
+          ),
+
           _buildDetailsRow("Status", "GoodBoy"),
         ],
       ),

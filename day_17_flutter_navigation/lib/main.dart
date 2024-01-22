@@ -16,7 +16,6 @@ class MainPage extends StatelessWidget {
         leading: ElevatedButton(
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => PageOne()));
-
           },
           child: Icon(Icons.arrow_forward, ),
 
